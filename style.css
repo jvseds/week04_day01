@@ -1,0 +1,32 @@
+
+body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 10rem;
+    height: 10rem;
+    background-color: brown;
+    font-size: 1.6rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease;
+  }
+  
+  .box::after {
+    content: "Pseudo";
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(255, 217, 0);
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+  }
+  
+  .box:hover::after {
+    /* put box::after back in original place */
+    transform: translateX(0);
+  }
